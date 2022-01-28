@@ -28,19 +28,35 @@ body {
   display: flex;
   justify-content: space-between;
   @include container;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   &-brand {
     color: $primary-color;
     font-size: 3em;
+    @include mobile {
+      align-self: center;
+      margin-bottom: 15px;
+    }
   }
   &-navbar {
     ul {
       height: 100%;
       @include flex-center;
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
     li {
       margin: 0 1em;
       text-transform: uppercase;
+      @include mobile {
+        margin-bottom: 15px;
+      }
 
       .active {
         color: $secondary-color;
@@ -57,6 +73,9 @@ body {
     ul {
       height: 100%;
       @include flex-center;
+      @include mobile {
+        display: none;
+      }
 
       li {
         margin: 1em;
@@ -77,6 +96,9 @@ body {
   padding: 0;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include mobile {
+    flex-direction: column;
+  }
 
   &-card {
     width: 31%;
@@ -84,6 +106,11 @@ body {
     margin-bottom: 4%;
     @include flex-center;
     flex-direction: column;
+    color: $primary-color;
+    @include mobile {
+      width: 91%;
+      margin-bottom: 8px;
+    }
 
     &-title {
       font-size: 2em;
@@ -106,30 +133,40 @@ body {
     }
   }
   #card-1 {
-    @include bg-img("animais.jpg");
+    @include bg-img("animais500.jpg");
   }
   #card-2 {
-    @include bg-img("arquitetura.jpg");
+    @include bg-img("arquitetura500.jpg");
   }
   #card-3 {
-    @include bg-img("cidade.jpg");
+    @include bg-img("cidade500.jpg");
   }
   #card-4 {
-    @include bg-img("decoracao.jpg");
+    @include bg-img("decoracao500.jpg");
   }
   #card-5 {
-    @include bg-img("esportes.jpg");
+    @include bg-img("esportes500.jpg");
   }
   #card-6 {
-    @include bg-img("natureza.jpg");
+    @include bg-img("natureza500.jpg");
   }
   #card-7 {
-    @include bg-img("paisagem.jpg");
+    @include bg-img("paisagem500.jpg");
   }
   #card-8 {
-    @include bg-img("pessoas.jpg");
+    @include bg-img("pessoas500.jpg");
   }
   #card-9 {
-    @include bg-img("refeicoes.jpg");
+    @include bg-img("refeicoes500.jpg");
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+
+  span {
+    font-weight: bold;
+    color: $secondary-color;
   }
 }

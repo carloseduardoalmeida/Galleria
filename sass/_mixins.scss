@@ -18,9 +18,16 @@
   background-position: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
-  transition: 0.5s;
+  transition: 0.6s;
 
   &:hover {
     background-size: 110%;
+    filter: none; //pode ser também -> filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagens/#{$img}");
+  }
+}
+@mixin mobile {
+  @media (max-width: 400px) {
+    @content;
   }
 }

@@ -26,9 +26,22 @@ body ul {
   padding: 30px 0;
   margin: 0 auto;
 }
+@media (max-width: 400px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .header-brand {
   color: white;
   font-size: 3em;
+}
+@media (max-width: 400px) {
+  .header-brand {
+    align-self: center;
+    margin-bottom: 15px;
+  }
 }
 .header-navbar ul {
   height: 100%;
@@ -36,9 +49,20 @@ body ul {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 400px) {
+  .header-navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .header-navbar li {
   margin: 0 1em;
   text-transform: uppercase;
+}
+@media (max-width: 400px) {
+  .header-navbar li {
+    margin-bottom: 15px;
+  }
 }
 .header-navbar li .active {
   color: #20c997;
@@ -51,6 +75,11 @@ body ul {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 400px) {
+  .header-social-media ul {
+    display: none;
+  }
 }
 .header-social-media ul li {
   margin: 1em;
@@ -71,6 +100,11 @@ body ul {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 400px) {
+  .gallery {
+    flex-direction: column;
+  }
+}
 .gallery-card {
   width: 31%;
   height: 400px;
@@ -79,6 +113,13 @@ body ul {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: white;
+}
+@media (max-width: 400px) {
+  .gallery-card {
+    width: 91%;
+    margin-bottom: 8px;
+  }
 }
 .gallery-card-title {
   font-size: 2em;
@@ -98,103 +139,130 @@ body ul {
   color: black;
 }
 .gallery #card-1 {
-  background-image: url("../imagens/animais.jpg");
+  background-image: url("../imagens/animais500.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 .gallery #card-1:hover {
   background-size: 110%;
+  filter: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagens/animais500.jpg");
 }
 .gallery #card-2 {
-  background-image: url("../imagens/arquitetura.jpg");
+  background-image: url("../imagens/arquitetura500.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 .gallery #card-2:hover {
   background-size: 110%;
+  filter: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagens/arquitetura500.jpg");
 }
 .gallery #card-3 {
-  background-image: url("../imagens/cidade.jpg");
+  background-image: url("../imagens/cidade500.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 .gallery #card-3:hover {
   background-size: 110%;
+  filter: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagens/cidade500.jpg");
 }
 .gallery #card-4 {
-  background-image: url("../imagens/decoracao.jpg");
+  background-image: url("../imagens/decoracao500.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 .gallery #card-4:hover {
   background-size: 110%;
+  filter: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagens/decoracao500.jpg");
 }
 .gallery #card-5 {
-  background-image: url("../imagens/esportes.jpg");
+  background-image: url("../imagens/esportes500.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 .gallery #card-5:hover {
   background-size: 110%;
+  filter: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagens/esportes500.jpg");
 }
 .gallery #card-6 {
-  background-image: url("../imagens/natureza.jpg");
+  background-image: url("../imagens/natureza500.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 .gallery #card-6:hover {
   background-size: 110%;
+  filter: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagens/natureza500.jpg");
 }
 .gallery #card-7 {
-  background-image: url("../imagens/paisagem.jpg");
+  background-image: url("../imagens/paisagem500.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 .gallery #card-7:hover {
   background-size: 110%;
+  filter: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagens/paisagem500.jpg");
 }
 .gallery #card-8 {
-  background-image: url("../imagens/pessoas.jpg");
+  background-image: url("../imagens/pessoas500.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 .gallery #card-8:hover {
   background-size: 110%;
+  filter: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagens/pessoas500.jpg");
 }
 .gallery #card-9 {
-  background-image: url("../imagens/refeicoes.jpg");
+  background-image: url("../imagens/refeicoes500.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
-  transition: 0.5s;
+  transition: 0.6s;
 }
 .gallery #card-9:hover {
   background-size: 110%;
+  filter: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagens/refeicoes500.jpg");
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+footer span {
+  font-weight: bold;
+  color: #20c997;
 }
 
 /*# sourceMappingURL=style.css.map */
