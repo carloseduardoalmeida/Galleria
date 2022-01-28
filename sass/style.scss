@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@200;300;400;600&family=Passion+One&family=Sriracha&display=swap");
+
+* {
+  font-family: "Josefin Sans", sans-serif, cursive;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import "variaveis";
+@import "mixins";
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+    transition: 0.2s;
+  }
+  ul {
+    list-style: none;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  @include container;
+
+  &-brand {
+    color: $primary-color;
+    font-size: 3em;
+  }
+  &-navbar {
+    ul {
+      height: 100%;
+      @include flex-center;
+    }
+    li {
+      margin: 0 1em;
+      text-transform: uppercase;
+
+      .active {
+        color: $secondary-color;
+      }
+
+      a {
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+  &-social-media {
+    ul {
+      height: 100%;
+      @include flex-center;
+
+      li {
+        margin: 1em;
+        font-size: 1.2em;
+        a {
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.gallery {
+  @include flex-center;
+  @include container;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &-card {
+    width: 31%;
+    height: 400px;
+    margin-bottom: 4%;
+    @include flex-center;
+    flex-direction: column;
+
+    &-title {
+      font-size: 2em;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+
+    &-btn {
+      padding: 8px 16px;
+      border: 2px solid $primary-color;
+      color: $primary-color;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $bg-color;
+      }
+    }
+  }
+  #card-1 {
+    @include bg-img("animais.jpg");
+  }
+  #card-2 {
+    @include bg-img("arquitetura.jpg");
+  }
+  #card-3 {
+    @include bg-img("cidade.jpg");
+  }
+  #card-4 {
+    @include bg-img("decoracao.jpg");
+  }
+  #card-5 {
+    @include bg-img("esportes.jpg");
+  }
+  #card-6 {
+    @include bg-img("natureza.jpg");
+  }
+  #card-7 {
+    @include bg-img("paisagem.jpg");
+  }
+  #card-8 {
+    @include bg-img("pessoas.jpg");
+  }
+  #card-9 {
+    @include bg-img("refeicoes.jpg");
+  }
+}
